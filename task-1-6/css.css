@@ -287,6 +287,10 @@ aside .news ul li{
 }
 aside .news ul a{
     display: inline-block;
+    width: 360px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     text-align: left;
     color: inherit;
     text-decoration: none;
