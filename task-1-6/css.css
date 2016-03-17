@@ -111,7 +111,7 @@ header date{
 .banner .banner-info h2{
     margin: 0;
     position: absolute;
-    bottom: -10px;
+    bottom: -14px;
     left: 0;
     font: 55px "微软雅黑";
     color: #cc8091;
@@ -317,8 +317,6 @@ aside .news .red-box{
     background-color: #db3e75; 
 }
 aside .news .red-box .zero{
-    position: relative;
-    top:10px;
     margin-left: 5px;
     font: 110px/160px "微软雅黑";
     color: #fff;
