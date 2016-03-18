@@ -1,0 +1,532 @@
+body{
+    padding: 0;
+    margin: 0;
+    color: #767777;
+    font: 12px "宋体";
+}
+@media(max-width:1280px){
+    body{
+        width: 1280px;
+    }
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*header开始*/
+header{
+    height: 57px;
+    font: 14px/57px "微软雅黑";
+    background-color: #eee;
+}
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+header h1{
+    float: left;
+    margin: 0 0 0 4.7%;
+    padding-left: 40px;
+    font-size: 21px;
+    background: url(./task-7/img/LOGO.png) no-repeat left center;
+}
+header nav{
+    float: right;
+    margin-right: 4.7%;
+}
+header nav ul::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+header nav li{
+    float: left;
+    padding: 0 20px; 
+}
+header nav a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+header nav li.cur{
+    height: 52px;
+    border-bottom: 5px solid #e74f4d;
+}
+header nav .cur a{
+    color: #e74f4d;
+}
+header nav .login{
+    background: url(./task-7/img/user.png) no-repeat left center;
+}
+header nav .login a{
+    color: #e74f4d;
+}
+/*banner开始*/
+.banner{
+    position: relative;
+    height: 690px;
+    font-family: "微软雅黑";
+    color: #fff;
+    background: url(./task-7/img/banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+.banner .mask{
+    height: 690px;
+    background-color: rgba(0,0,0,.2);
+}
+.banner section{
+    position: absolute;
+    margin-left: 10%;
+    left: 0;
+    bottom: 328px;
+}
+.banner section h3{
+    margin: 0;
+    font-size: 60px;
+    font-weight: normal;
+}
+.banner section p{
+    margin: 0;
+    font-size: 21px;
+    line-height: 34px;
+}
+.banner a{
+    position: absolute;
+    left: 0;
+    width: 330px;
+    height: 63px;
+    bottom: 198px;
+    margin-left: 10%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 63px;
+    background-color: #e74f4d;
+}
+
+/*feature开始*/
+.feature::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.feature div{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 250px;
+}
+.feature div p{
+    position: absolute;
+    left: 0;
+    top:132px;
+    box-sizing: border-box;
+    margin: 0 0 0 27%;
+    padding-right: 80px;
+    width: 73%;
+    height: 52px;
+    font: 14px/18px "黑体";
+    border-right: 2px solid #aaa;
+}
+.feature div:last-child p{
+    border: none;
+}
+.feature .circle{
+    background: url(./task-7/img/icon-1.png) no-repeat center 45px;
+}
+.feature .flag{
+    background: url(./task-7/img/icon-2.png) no-repeat center 45px;
+}
+.feature .flower{
+    background: url(./task-7/img/icon-3.png) no-repeat center 45px;
+}
+.feature .square{
+    background: url(./task-7/img/icon-4.png) no-repeat center 45px;
+}
+
+/*new world开始*/
+.new-world{
+    position: relative;
+    height: 360px;
+    background: url(./task-7/img/logo_big.png) no-repeat center 90px;
+    background-color: #ededec;
+}
+.new-world h2{
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    margin: 0;
+    width: 100%;
+    font:54px "黑体";
+    color: #a1a1a1;
+    text-align: center;
+}
+
+/*city开始*/
+.city{
+    position: relative;
+    height: 340px;
+    font-family: "微软雅黑";
+    background: url(./task-7/img/map.jpg) no-repeat center center;
+    background-size: cover;
+}
+.city section{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50px;
+    text-align: center;
+}
+.city section h3{
+    margin: 0;
+    font-size: 21px;
+    font-weight: normal;
+    color: #fff;
+}
+.city section p{
+    position: relative;
+    margin: 30px 0 0;
+    font-size: 12px;
+    color: #fff;
+}
+.city section p::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top:-25px;
+    margin-left: -15px;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+.city .form{
+    position: absolute;
+    left: 0;
+    bottom: 133px;
+    margin: 0 8.5%;
+    width: 83%;
+    font:14px "微软雅黑";
+    color: #a8aaaa;
+}
+.city .form::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.city .form>ul, .city .form .search{
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    height: 35px;
+    padding: 0 15px;
+}
+.city .form>ul>li{
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    line-height: 35px;
+}
+.city .form>.search>a{
+    display: block;
+    background-color: #be4f48;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2em;
+    line-height: 35px;
+    text-align: center;
+}
+.city .form>ul>li>a{
+    position: relative;
+    display: block;
+    padding:0 0 0 12px;
+    text-decoration: none;
+    color: #a8aaaa;
+}
+.city .form>ul>li>a .arrow{
+    position: absolute;
+    display: block;
+    right: 8px;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background: url(./task-7/img/arrow.png) no-repeat center center;
+}
+.city .form>ul>li.cur>a{
+    border: 1px solid #be4f48;
+    border-bottom: none;
+}
+.city .form>ul>li.cur>ul{
+    position: absolute;
+    top:35px;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 10px;
+    border: 1px solid #be4f48;
+    border-top: none;
+    background-color: #e3e2e4;
+    
+}
+.city .form>ul>li.cur>ul>li{
+    padding-left: 30px;
+    line-height: 28px;
+}
+.city .form>ul>li.cur>ul>li.selected{
+    background: url(./task-7/img/selected.png) no-repeat 8px center #be4e48;
+    color: #fff;
+}
+
+/*photo开始*/
+.photo{
+    height: 505px;
+    padding: 0 10%;
+    padding-top: 100px;
+    background-color: #f8f8f8;
+}
+.photo-list{
+    top: 100px;
+}
+.photo-list::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.photo .thumbnail{
+   float: left;
+   box-sizing: border-box;
+   width: 25%;
+   padding: 0 18px;
+   text-align: center;
+}
+.photo .thumbnail img{
+    width: 203px;
+    height: 312px;
+    padding: 12px 7px;
+    border: 1px solid #e1e1e0;
+    background-color: #fff;
+}
+.photo .cur span{
+    display: block;
+    margin-bottom: 8px;
+}
+.photo .thumbnail h4{
+    margin: 12px 0;
+    color: #323333;
+    font-size: 16px;
+    font-family: "黑体";
+}
+.photo .thumbnail span{
+    font-size: 14px;
+    color: #888989;
+}
+.photo .thumbnail.cur h4{
+    margin-top: 0;
+}
+/*world-info开始*/
+.world-info .top{
+    height: 566px;
+}
+.world-info .top::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.world-info .top .world-info-banner{
+    position: relative;
+    float: left;
+    width: 66.8%;
+    height: 100%;
+    font-family: "微软雅黑";
+    background: url(./task-7/img/photo-5.jpg) no-repeat center center;
+    background-size: cover;
+}
+.world-info .top .world-info-banner section{
+    position: absolute;
+    top:132px;
+    width: 100%;
+    text-align: center;
+}
+.world-info .top .world-info-banner h2{
+    margin: 0;
+    font-size: 50px;
+    font-weight: normal;
+    color: #fff;
+}
+.world-info .top .world-info-banner h2 span{
+    font-size: 158px;
+    line-height: 1em;
+}
+.world-info .top .world-info-banner p, .world-info .top .world-info-banner date{
+    margin: 5px 0;
+    font-size: 20px;
+    color: #fff;
+}
+.world-info .top .world-info-text{
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+    padding: 165px 70px 25px;
+    width: 33.2%;
+    height: 100%;
+    color: #aaa;
+}
+.world-info .top .world-info-text::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 268px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-right: 25px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+.world-info .top .world-info-text h3{
+    margin: 0 0 20px 0; 
+    text-align: center;
+    font: 20px "黑体";
+    color: #323333;
+}
+.world-info .top .world-info-text h3 span{
+    color: #e74f4d;
+}
+.world-info .top .world-info-text p{
+    margin: 0;
+    line-height: 30px;
+}
+.world-info .top .world-info-text a{
+    display: block;
+    width: 105px;
+    height: 33px;
+    margin: 45px auto;
+    margin-bottom: 20px;
+    color: #e74f4d;
+    font: 14px/33px "微软雅黑";
+    text-decoration: none;
+    text-align: center; 
+    border:1px solid #e74f4d;
+}
+.world-info .top .world-info-text .pointer{
+    text-align: center;
+    font-size: 0;
+}
+.world-info .top .world-info-text .pointer i{
+    display: inline-block;
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #919292;
+}
+.world-info .top .world-info-text .pointer i.cur{
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: #919292;
+}
+.world-info .bottom::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.world-info .bottom>div{
+    position: relative;
+    float: left;
+    width: 33.333%;
+    height: 520px;
+    background-color: #333;
+}
+.world-info .bottom .life-1{
+    background-color: #e74f4d;
+}
+.world-info .bottom .life-2{
+    background-color: #fff;
+}
+.world-info .bottom .life-3{
+    background: url(./task-7/img/photo-6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.world-info .bottom h4{
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    font: 21px "微软雅黑";
+    color: #fff;
+    text-align: center;
+}
+.world-info .bottom h4::after{
+    position: absolute;
+    content: "";
+    display: block; 
+    left: 50%;
+    margin-left: -15px;
+    bottom: -20px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+}
+.world-info .bottom a{
+    position: absolute;
+    width: 167px;
+    height: 41px;
+    left: 50%;
+    top: 57%;
+    margin-left: -83.5px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font: 18px/41px "微软雅黑";
+}
+.world-info .bottom .life-2 h4{
+    color: #323333;
+}
+
+.world-info .bottom .life-2 h4::after{
+    position: absolute;
+    content: "";
+    display: block; 
+    left: 50%;
+    margin-left: -15px;
+    bottom: -20px;
+    width: 30px;
+    height: 2px;
+    background-color: #323333;
+}
+.world-info .bottom .life-2 a{
+    color: #323333;
+    border-color: #323333; 
+}
+
+/*volunteer开始*/
+.volunteer{
+    margin-top: 118px;
+}
