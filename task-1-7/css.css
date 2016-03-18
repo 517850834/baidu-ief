@@ -528,5 +528,185 @@ header nav .login a{
 
 /*volunteer开始*/
 .volunteer{
-    margin-top: 118px;
+    margin-top: 110px;
+}
+.volunteer header{
+    text-align: center;
+    background-color: #fff;
+}
+.volunteer header h3{
+    position: relative;
+    margin: 0;
+    background-color: #fff;
+    font:20px "微软雅黑";
+}
+.volunteer header h3::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -16px;
+    bottom: -10px;
+    height: 3px;
+    width: 32px;
+    background-color: #be4e48;
+}
+.volunteer header p{
+    margin:20px 0 0 0;
+    font:14px/25px "微软雅黑";
+}
+.volunteer .paper{
+    margin-top: 100px;
+    padding: 0 10.5%;
+}
+.volunteer .paper::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.volunteer .paper ul{
+    float: left;
+    width: 25.3%;
+}
+.volunteer .paper ul h4{
+    margin: 0 0 17px 0;
+}
+.volunteer .paper p{
+    font:12px/21px "宋体";
+}
+.volunteer .paper ul li{
+    position: relative;
+    padding-bottom: 3px;
+    margin-bottom: 30px;
+}
+.volunteer .paper ul li:last-child{
+    margin-bottom: 0;
+}
+.volunteer .paper ul a.more{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    padding-left: 20px;
+    text-decoration: none;
+    color: inherit;
+    background: url(./task-7/img/arrow-down.png) no-repeat 0 5px;
+}
+.volunteer form{
+    float: right;
+    width: 70%;
+}
+.volunteer form div{
+    margin-bottom: 10px;
+}
+.volunteer form div::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+.volunteer form div .form-item{
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    width: 50%;
+}
+.volunteer form div .form-item:last-child{
+    padding-left: 9px;
+}
+.volunteer form div .form-item:first-child{
+    padding-right: 9px;
+}
+.volunteer form div .form-item label{
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    margin-top: -7px;
+    font-size: 14px;
+}
+.volunteer form div .form-item input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 2px 0 0 55px;
+    font-size: 14px;
+    background-color: #ededef;
+}
+.volunteer form div .form-item input:focus{
+    outline: none;
+}
+.volunteer form textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #ededef;
+}
+.volunteer form button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font: 16px/40px "微软雅黑";
+}
+/*contact部分*/
+.contact{
+    box-sizing: border-box;
+    padding-top: 90px;
+    margin-top: 165px;
+    height: 358px;
+    text-align: center;
+    color: #fff;
+    background-color: #32353e;
+}
+.contact h3{
+    margin: 0 0 10px;
+    font: 22px 微软雅黑;
+}
+.contact p{
+    margin: 0;
+    line-height: 18px;
+}
+.contact form{
+    margin-top: 30px;
+}
+.contact form input{
+    box-sizing: border-box;
+    width: 430px;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.contact form button{
+    position: relative;
+    top: 2px;
+    height: 40px;
+    width: 80px;
+    border: none;
+    font:16px/40px "微软雅黑";
+    text-align: center;
+    color: #fff;
+    background-color: #6f7178;
+}
+.contact form button:focus{
+    outline: none;
+}
+
+/*footer开始*/
+body>footer{
+    box-sizing: border-box;
+    padding: 30px 3.1% 0 7.4%;
+    height: 58px;
+    background-color: #2f2f38;
+}
+body>footer .left{
+    float: left;
+}
+body>footer .right{
+    float: right;
 }
