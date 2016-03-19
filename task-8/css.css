@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 10px 30px 0;
+}
+.row{
+    margin: 0 -10px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.row>div>div{
+    margin-bottom: 20px;
+    border: 1px solid #999;
+    background-color: #eee;
+    height: 50px;
+}
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-xs-1{
+        width: 8.333333333333332%;
+    }
+    .col-xs-2{
+        width: 16.66666666666664%;
+    }
+    .col-xs-3{
+        width: 25%;
+    }
+    .col-xs-4{
+        width: 33.333333333333333%;
+    }
+    .col-xs-5{
+        width: 41.666666666666667%;
+    }
+    .col-xs-6{
+        width: 50%;
+    }
+    .col-xs-7{
+        width: 58.3333333333333336%;
+    }
+    .col-xs-8{
+        width: 66.6666666666666666%;
+    }
+    .col-xs-9{
+        width: 75%;
+    }
+    .col-xs-10{
+        width: 83.3333333333333334%;
+    }
+    .col-xs-11{
+        width: 91.6666666666666666%;
+    }
+    .col-xs-12{
+        width: 100%;
+    }
+@media (min-width:769px){
+    
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-md-1{
+        width: 8.333333333333332%;
+    }
+    .col-md-2{
+        width: 16.66666666666664%;
+    }
+    .col-md-3{
+        width: 25%;
+    }
+    .col-md-4{
+        width: 33.333333333333333%;
+    }
+    .col-md-5{
+        width: 41.666666666666667%;
+    }
+    .col-md-6{
+        width: 50%;
+    }
+    .col-md-7{
+        width: 58.3333333333333336%;
+    }
+    .col-md-8{
+        width: 66.6666666666666666%;
+    }
+    .col-md-9{
+        width: 75%;
+    }
+    .col-md-10{
+        width: 83.3333333333333334%;
+    }
+    .col-md-11{
+        width: 91.6666666666666666%;
+    }
+    .col-md-12{
+        width: 100%;
+    }
+}
