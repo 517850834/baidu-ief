@@ -468,7 +468,22 @@ header nav .login a{
     background-color: #e74f4d;
 }
 .world-info .bottom .life-2{
+    position: relative;
     background-color: #fff;
+}
+.world-info .bottom .life-2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    margin-top: -7.5px;
+    right: -25px;
+    width: 0;
+    height: 0;
+    border-left: 25px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
 }
 .world-info .bottom .life-3{
     background: url(./task-7/img/photo-6.jpg) no-repeat center center;
@@ -626,6 +641,9 @@ header nav .login a{
     top: 50%;
     margin-top: -7px;
     font-size: 14px;
+}
+.volunteer form div .form-item:last-child label{
+    left: 26px;
 }
 .volunteer form div .form-item input{
     box-sizing: border-box;
