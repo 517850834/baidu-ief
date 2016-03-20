@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task-10</title>
+    <style>
+        .flex-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex-item{
+            width: 150px;
+            margin-bottom: 20px;
+            border: 1px solid #f00;
+        }
+        .one{
+            height: 120px;
+        }
+        .two{
+            height: 100px;
+        }
+        .three{
+            height: 40px;
+        }
+        .four{
+            height: 200px;
+            border-color: #0f0;
+        }
+        @media (max-width:640px){
+            .flex-box{
+                align-items: flex-start;
+            }
+            .four{
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="flex-item one"></div>
+        <div class="flex-item two"></div>
+        <div class="flex-item three"></div>
+        <div class="flex-item four"></div>
+    </div>
+</body>
+
+</html>
