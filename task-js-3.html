@@ -77,7 +77,7 @@
 
         function render(data) {
             for (var i = 0; i < data.length; i++) {
-                data[i][0] = '<li>第' + i + '名：' + data[i][0] + '：';
+                data[i][0] = '<li>第' + i + 1 + '名：' + data[i][0] + '：';
                 data[i][1] = '<b>' + data[i][1] + '</b></li>';
                 data[i] = data[i][0].concat(data[i][1]);
             }
