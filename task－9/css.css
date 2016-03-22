@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+/*头部开始*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #2189bf;
+}
+
+header h1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 10px;
+    left: 50px;
+    width: 36px;
+    height: 36px;
+    text-indent: -999em;
+    background: url(./images/logo.png) no-repeat center center;
+}
+
+#search {
+    position: absolute;
+    right: 156px;
+    bottom: 14px;
+    width: 312px;
+    height: 28px;
+}
+
+#search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 25px;
+    padding-left: 40px;
+    background: url(./images/search.png) no-repeat 18px center #fff;
+}
+
+#search input:focus {
+    outline: none;
+}
+
+header a {
+    position: absolute;
+    right: 93px;
+    bottom: 20px;
+    height: 16px;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 16px;
+    font-size: 12px;
+    text-decoration: none;
+    background: url(./images/login.png) no-repeat left center;
+}
+
+
+/*边栏开始*/
+
+aside {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    background-color: #2a2e3d;
+}
+
+aside .user-info {
+    position: relative;
+    height: 150px;
+    font-size: 12px;
+}
+
+aside .user-info .avatar {
+    position: absolute;
+    display: block;
+    top: 18px;
+    left: 45px;
+    width: 57px;
+    height: 57px;
+    text-align: center;
+    line-height: 57px;
+    border-radius: 50%;
+    background-color: #bababe;
+}
+
+aside .user-info .avatar>i {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    vertical-align: middle;
+    border: 5px solid #2a2d3d;
+    border-radius: 50%;
+}
+
+aside .user-info h3 {
+    position: absolute;
+    left: 120px;
+    top: 40px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+aside .user-info .collect {
+    position: absolute;
+    left: 62px;
+    bottom: 23px;
+    margin: 0;
+    color: #576477;
+}
+
+aside .user-info .fans {
+    position: absolute;
+    left: 150px;
+    bottom: 23px;
+    margin: 0;
+    color: #576477;
+}
+
+aside .user-info .line {
+    position: absolute;
+    left: 117px;
+    bottom: 21px;
+    width: 2px;
+    height: 28px;
+    background-color: #313545;
+}
+
+aside .file-tree>ul {
+    color: #6e8095;
+    font-size: 12px;
+}
+
+aside .file-tree .report {
+    background: url(images/file-icon-1.png) no-repeat 45px 14px;
+}
+
+aside .file-tree .personal-collection,
+aside .file-tree .gallery,
+aside .file-tree .growth {
+    background: url(./images/star.png) no-repeat 45px 14px;
+}
+
+aside .file-tree .share {
+    background: url(./images/share.png) no-repeat 45px 14px;
+}
+
+aside .file-tree .account {
+    background: url(./images/account.png) no-repeat 45px 14px;
+}
+
+aside .file-tree>ul a {
+    text-decoration: none;
+    color: #6e8095;
+}
+
+aside .file-tree>ul>li {
+    padding: 15px 0 15px 68px;
+}
+
+aside .file-tree>ul>li.cur {
+    background-color: #383d4e;
+    height: 162px;
+}
+
+aside .file-tree>ul>li.cur>ul {
+    height: 150px;
+    overflow: auto;
+}
+
+aside .file-tree>ul>li:hover {
+    background-color: #383d4e;
+}
+
+aside .file-tree>ul>li.cur>ul>li {
+    padding-left: 30px;
+    padding-top: 18px;
+    background: url(./images/file-icon-2.png) no-repeat left 18px;
+}
+
+aside .file-tree>ul>li.cur>ul>li.cur {
+    color: #fff;
+    background: url(./images/file-icon-2-cur.png) no-repeat left 18px;
+}
+
+aside .file-tree>ul>li.cur>ul>li.cur li {
+    padding-left: 15px;
+    padding-top: 18px;
+    background: url(./images/file-icon-4.png) no-repeat left 18px;
+}
+
+aside .file-tree>ul>li.cur>ul>li.cur li.cur {
+    background: url(./images/file-icon-3-cur.png) no-repeat left 18px;
+}
+
+aside .file-tree>ul>li.cur,
+aside .file-tree>ul .cur>a {
+    color: #fff;
+}
+
+aside .file-tree>ul>li.cur li {
+    color: #6e8095;
+}
+
+aside .file-tree>ul>li.cur li.cur {
+    color: #fff;
+}
+
+
+/*主体部分*/
+
+.content {
+    margin: 86px 0 0 260px;
+    background-color: #eeeeed;
+}
+
+.content .crumb-nav {
+    position: fixed;
+    top: 56px;
+    left: 260px;
+    height: 30px;
+    width: 100%;
+    padding-left: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.content .crumb-nav li {
+    position: relative;
+    float: left;
+    min-width: 35px;
+    margin-right: 5px;
+    padding-right: 8px;
+}
+
+.content .crumb-nav li::after {
+    content: "/";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #aaa;
+}
+
+.content .crumb-nav li:last-child::after {
+    content: "";
+    display: none;
+}
+
+.content .crumb-nav li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.content .crumb-nav li.cur a {
+    color: #5e93c1;
+}
+
+.content .content-info {
+    width: 90%;
+    margin: 0 auto;
+}
