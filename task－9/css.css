@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 1000px;
+    font-family: "微软雅黑";
 }
 
 ul {
@@ -681,6 +682,7 @@ aside .file-tree>ul>li.cur li.cur {
 .content .panels .panel-item table td {
     position: relative;
     color: #595a5b;
+    padding: 0 15px;
     line-height: 26px;
     font-size: 12px;
     border: 1px solid #d2d3d3;
@@ -915,6 +917,7 @@ aside .file-tree>ul>li.cur li.cur {
 .content .panels .date ul li.cur {
     border: 2px solid #f8d564;
 }
+
 
 /*
 .content .panels .date ul li:hover {
