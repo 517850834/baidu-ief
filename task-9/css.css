@@ -189,7 +189,6 @@ aside .file-tree>ul>li {
 
 aside .file-tree>ul>li.cur {
     background-color: #383d4e;
-    height: 162px;
 }
 
 aside .file-tree>ul>li:hover {
