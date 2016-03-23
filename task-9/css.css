@@ -102,20 +102,21 @@ aside .user-info .avatar {
     display: block;
     top: 18px;
     left: 45px;
-    width: 57px;
-    height: 57px;
-    text-align: center;
-    line-height: 57px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-    background-color: #bababe;
+    border: 2px solid #b9babd;
 }
 
 aside .user-info .avatar>i {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    vertical-align: middle;
-    border: 5px solid #2a2d3d;
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin: -22px 0 0 -22px;
+    width: 44px;
+    height: 44px;
+    background-color: #b9babd;
     border-radius: 50%;
 }
 
@@ -193,7 +194,6 @@ aside .file-tree>ul>li.cur {
 
 aside .file-tree>ul>li.cur>ul {
     height: 150px;
-    overflow: auto;
 }
 
 aside .file-tree>ul>li:hover {
