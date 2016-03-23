@@ -192,10 +192,6 @@ aside .file-tree>ul>li.cur {
     height: 162px;
 }
 
-aside .file-tree>ul>li.cur>ul {
-    height: 150px;
-}
-
 aside .file-tree>ul>li:hover {
     background-color: #383d4e;
 }
