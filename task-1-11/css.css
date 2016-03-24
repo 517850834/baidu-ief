@@ -53,6 +53,12 @@ body {
     }
 }
 
+@media (min-width: 1920px) {
+    html {
+        font-size: 76.8px;
+    }
+}
+
 a,
 img {
     -webkit-touch-callout: none;
