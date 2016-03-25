@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+    text-align: left;
+}
+
+table thead tr {
+    color: #fff;
+    text-align: left;
+    background-color: #000;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+table tbody tr:nth-child(1),
+table tbody tr:nth-child(2),
+table tbody tr:nth-child(3) {
+    color: #f00;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input {
+    width: 100px;
+    -webkit-transition: 1s ease;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+form input:focus {
+    outline: none;
+    width: 300px;
+}
+
+.slider {
+    position: relative;
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.slider .slider-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 100px;
+    -webkit-transition: left 1s;
+    transition: left 1s;
+}
+
+.slider .slider-wrap .slider-item {
+    float: left;
+    width: 300px;
+    height: 100px;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+}
+
+.slider .slider-wrap .slider-item:nth-child(1) {
+    background-color: deepskyblue;
+}
+
+.slider .slider-wrap .slider-item:nth-child(2) {
+    background-color: cornflowerblue;
+}
+
+.slider .slider-wrap .slider-item:nth-child(3) {
+    background-color: dodgerblue;
+}
+
+.slider .slider-pointer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.slider .slider-pointer a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#first:target~.slider-wrap {
+    left: 0;
+}
+
+#second:target~.slider-wrap {
+    left: -300px;
+}
+
+#third:target~.slider-wrap {
+    left: -600px;
+}
