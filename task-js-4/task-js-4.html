@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task-js-4</title>
+    <style>
+        body {
+            margin: 0;
+            background: #eee;
+        }
+        
+        .input {
+            width: 300px;
+            margin: 20px auto;
+        }
+        
+        .input button {
+            width: 100%;
+            height: 30px;
+            background-color: cornflowerblue;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            line-height: 30px;
+            border-radius: 5px;
+            box-shadow: 2px 1px 3px darkblue;
+        }
+        
+        .input>.input-items {
+            height: 30px;
+            width: 300px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .input>.input-items>div {
+            height: 30px;
+            width: 150px;
+            float: left;
+        }
+        
+        .input>.input-items>div:first-child {
+            line-height: 30px;
+            text-align: right;
+        }
+        
+        .input>.input-items>div:last-child {
+            text-align: left;
+        }
+        
+        .input>.input-items>div input {
+            width: 150px;
+            padding: 0;
+            padding-left: 5px;
+            border: 0;
+            background-color: #fff;
+            height: 100%;
+            line-height: 30px;
+        }
+        
+        .input>.input-items>div input:focus {
+            outline: none;
+        }
+        
+        table {
+            width: 300px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        table thead th {
+            padding: 5px;
+            text-align: left;
+            background-color: cadetblue;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background-color: cadetblue;
+        }
+        
+        table tbody tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        
+        table tbody tr td {
+            padding: 5px;
+        }
+        
+        table tbody button {
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+            box-shadow: 2px 1px 3px darkblue;
+            cursor: pointer;
+        }
+        
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input">
+        <div class="input-items">
+            <div>
+                <label for="aqi-city-input">城市名称：</label>
+            </div>
+            <div>
+                <input id="aqi-city-input" type="text" name="aqi-city-input">
+            </div>
+        </div>
+        <div class="input-items">
+            <div>
+                <label for="aqi-value-inpu">空气质量指数：</label>
+            </div>
+            <div>
+                <input id="aqi-value-input" type="text" name="aqi-value-input">
+            </div>
+        </div>
+        <button id="add-btn">确认添加</button>
+    </div>
+    <table id="aqi-table">
+        <!-- 
+    <tr>
+      <td>城市</td><td>空气质量</td><td>操作</td>
+    </tr>
+    <tr>
+      <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+    <tr>
+      <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+   -->
+        <thead>
+            <tr>
+                <th>城市</th>
+                <th colspan="2">空气指数</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
