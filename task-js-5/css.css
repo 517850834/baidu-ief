@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+#aqi-chart-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+    box-shadow: 2px 1px 3px #ccc;
+    background-color: #dee2e6;
+}
+
+fieldset {
+    width: 1200px;
+    padding: 0;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#aqi-chart-wrap>div {
+    -webkit-animation: show 1s ease-in-out;
+    animation: show 1s ease-in-out;
+    box-shadow: 2px 0 3px #4f769d;
+}
+
+@-webkit-keyframes show {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
