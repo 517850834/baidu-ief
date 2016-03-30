@@ -152,10 +152,9 @@ function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
     var dataSource = aqiSourceData[pageState.nowSelectCity];
-    var weekData = {},
-        monthData = {};
 
     function getWeekData() {
+        var weekData = {};
         var sum = 0,
             i = 0,
             week = 0;
@@ -169,37 +168,36 @@ function initAqiChartData() {
                 sum = 0;
             }
         }
-        if (i != 0) {
-            week++;
-            weekData['2016年第' + week + '周'] = parseInt(sum / i);
-        }
         return weekData;
     }
 
     function getMonthData() {
-        sum = 0;
-        i = 0;
-        var month = 1;
-        for (day in dataSource) {
-            var date = new Date(day);
-            //console.log(date.getMonth());
-            if (date.getMonth() != month) {
-                month = date.getMonth();
-
-                if (sum != 0)
-                    monthData[date.getFullYear() + '-' + (month ? ('0' + month) : month)] = parseInt(sum / i);
-                sum = 0;
-                i = 0;
+        var monthData = {},
+            sum = 0,
+            i = 0,
+            month = 1;
+        for (var day in dataSource) {
+            var date = new Date(day); //获取当前日期
+            var newYear = date.getFullYear(); //获取当前年份
+            var newMonth = date.getMonth() + 1; //获取下一月份
+            if (newMonth > 11) { //如果下一月份超过今年
+                newMonth = 0; //月份设置为1月
+                newYear++; //年份加到下一年
             }
-            sum += dataSource[day];
-            i++;
-        }
-        if (i != 0) {
-            month++;
-            monthData[date.getFullYear() + '-' + (month ? ('0' + month) : month)] = parseInt(sum / i);
+            var nextMonth = new Date(newYear, newMonth, 1); //新建下月的第一天
+            var lastDay = new Date(nextMonth.getTime() - 1000 * 60 * 60 * 24).getDate(); //下月第一天减掉一天获取到当月最后一天
+            sum += dataSource[day]; //累加污染指数
+            i++; //累加当月天数
+            if (date.getDate() == lastDay) { //当月天数等于当月最后一天时
+                monthData[date.getFullYear() + '第' + month + '月'] = parseInt(sum / i); //给monthData对象添加当月的平均值
+                sum = 0; //清空污染指数
+                i = 0; //清空当月天数
+                month++; //月份记录值加1
+            }
         }
         return monthData;
     }
+
     switch (pageState.nowGraTime) {
     case 'day':
         chartData = dataSource;
