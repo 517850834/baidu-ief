@@ -1,0 +1,116 @@
+body {
+    padding: 20px 0 0;
+    margin: 0;
+}
+
+body .wrap {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body .wrap input {
+    padding: 0 10px;
+    margin: 0;
+    width: 150px;
+    height: 26px;
+    border: 2px solid #ccc;
+    box-shadow: 2px 1px 2px #ccc;
+}
+
+body .wrap input:focus {
+    outline: none;
+}
+
+body .wrap button {
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    color: #D3DCF2;
+    text-align: center;
+    text-shadow: 1px 1px 1px #333;
+    border: none;
+    box-shadow: 2px 1px 2px #ccc;
+}
+
+body .wrap button:focus {
+    outline: none;
+}
+
+#chartWrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    height: 520px;
+    margin-top: 20px;
+    /*    border: 1px solid #43464C;*/
+    background-color: #D3DCF2;
+}
+
+#chartWrap>div {
+    width: 18px;
+    margin-left: 2px;
+    background-color: #333;
+    /*
+    -webkit-animation: show 1s ease-out;
+    animation: show 1s ease-in;
+*/
+}
+
+#chartWrap>div:first-child {
+    margin-left: 0;
+}
+
+#arrayList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#chartWrap,
+#arrayList {
+    box-shadow: 2px 1px 2px #ccc;
+}
+
+#arrayList span {
+    width: 18px;
+    height: 20px;
+    margin-left: 2px;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: #333;
+}
+
+#arrayList span:first-child {
+    margin-left: 0;
+}
+
+
+/*
+@-webkit-keyframes show {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}*/
