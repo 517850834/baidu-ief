@@ -1,5 +1,5 @@
 (function () {
-    var numData = [1, 2, 3, 4, 5];
+    var numData = [];
     var inputSource = document.getElementById('inputSource');
     var leftInBtn = document.getElementById('leftIn');
     var rightInBtn = document.getElementById('rightIn');
@@ -7,28 +7,40 @@
     var rightOutBtn = document.getElementById('rightOut');
     var numList = document.getElementById('numList');
 
-    function checkInputSource(func) { //输入数据的时候检测value值是否为空，免得显示不出效果，没有强制要求只能输入的数据只能数字。
-        if (inputSource.value == '') {
-            alert('请输入要操作的字符，没有强制要求是否为数字。');
-        } else {
+    function checkInputSource(func) {
+        var inputSourceValue = inputSource.value;
+        if (inputSourceValue != "" && /^-?\d(\.\d+)?\d?$/.test(inputSourceValue)) {
             func();
+        } else {
+            alert("请输入正确的数字");
         }
     }
 
     function leftIn() {
         numData.unshift(inputSource.value);
+        inputSource.value = "";
     }
 
     function rightIn() {
         numData.push(inputSource.value);
+        inputSource.value = "";
     }
 
     function leftOut() {
-        numData.shift(inputSource.value);
+        if (numData.length == 0) {
+            alert("没有数据可以删除")
+        } else {
+            alert(numData.shift());
+        }
+
     }
 
     function rightOut() {
-        numData.pop(inputSource.value);
+        if (numData.length == 0) {
+            alert("没有数据可以删除");
+        } else {
+            alert(numData.pop());
+        }
     }
 
     function render() {
@@ -37,6 +49,7 @@
             result += '<span>' + numData[i] + '</span>';
         }
         numList.innerHTML = result;
+        spanListClick();
     }
 
     function btnHandle() {
@@ -56,6 +69,20 @@
             rightOut();
             render();
         });
+    }
+
+    function spanListClick() {
+        var spanList = numList.children,
+            length = spanList.length;
+        for (var i = 0; i < length; i++) {
+            (function (i) {
+                spanList[i].addEventListener("click", function () {
+                    numData.splice(i, 1);
+                    render();
+                    console.log(numData);
+                });
+            })(i);
+        }
     }
 
     function init() {
