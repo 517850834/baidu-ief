@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: "微软雅黑";
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#tagList {
+    margin-top: 20px;
+}
+
+#tagList span {
+    padding: 8px 5px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #8cc8fa;
+    cursor: pointer;
+}
+
+#hobby {
+    margin-top: 20px;
+}
+
+#hobbyList {
+    margin-top: 20px;
+}
+
+#hobbyList span {
+    padding: 8px 5px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #ffce90;
+    cursor: pointer;
+}
