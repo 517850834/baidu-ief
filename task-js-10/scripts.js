@@ -1,5 +1,6 @@
 (function () {
-    var negativeFilm = []; //新建一个空数组来存储遍历的顺序作为播放的底片。
+    var negativeFilm = [],
+        timer; //新建一个空数组来存储遍历的顺序作为播放的底片。
 
     function clickHandler() { //给每个按钮添加一个点击事件
         var button = document.getElementsByTagName("input"),
@@ -14,6 +15,7 @@
     }
 
     function clickEvent(value) { //根据点击的按钮不同来触发不同的遍历
+        clearInterval(timer);
         var root = document.getElementById("root"); //获取到遍历的根节点
         negativeFilm = []; //每次点击将播放底片清空
         if (value == "前序遍历") { //执行对应的遍历函数
@@ -29,7 +31,7 @@
     function broadcast() { //设置遍历动作完成后开始播放底片的函数
         var i = 0,
             length = negativeFilm.length;
-        var timer = setInterval(function () {
+        timer = setInterval(function () {
             if (i < length) {
                 negativeFilm[i].style.backgroundColor = "dodgerblue"; //给当前播放的底片加背景色
                 if (i > 0) {
@@ -43,6 +45,9 @@
                 lastFPS.style.backgroundColor = ""; //播放介绍时清除最后一个底片的背景色
             }
         }, 1000);
+        for (var j = 0; j < length; j++) {
+            negativeFilm[j].style.backgroundColor = "";
+        }
     }
 
     function doSomeThing(node) { //遍历时将每次遍历的过程插入到播放底片数组
