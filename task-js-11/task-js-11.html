@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task-js-11</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="input-group">
+            <button value="pre">前序遍历</button>
+            <button value="in">中序遍历</button>
+            <button value="post">后序遍历</button>
+            <input id="search" type="search">
+            <button value="search">搜索</button>
+            <select name="select" id="select">
+                <option value="pre">前序搜索</option>
+                <option value="in">中序搜索</option>
+                <option value="post">后序搜索</option>
+            </select>
+        </div>
+        <div id="root">
+            super
+            <div class="children-1">
+                cow
+                <div class="children-2">
+                    apple
+                    <div class="children-3">pear</div>
+                    <div class="children-3">pig</div>
+                    <div class="children-3">cola</div>
+                    <div class="children-3">soccer</div>
+                </div>
+                <div class="children-2">
+                    phone
+                </div>
+                <div class="children-2">
+                    <div class="children-3">book</div>
+                    <div class="children-3">school</div>
+                </div>
+            </div>
+            <div class="children-1">
+                note
+                <div class="children-2">
+                    human
+                    <div class="children-3">code</div>
+                    <div class="children-3">operate</div>
+                    <div class="children-3">man</div>
+                </div>
+                <div class="children-2">
+                    program
+                    <div class="children-3">
+                        bement
+                        <div class="children-4">cat</div>
+                    </div>
+                    <div class="children-3">glass</div>
+                </div>
+            </div>
+            <div class="children-1">fish</div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
