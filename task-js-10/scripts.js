@@ -1,6 +1,6 @@
 (function () {
-    var negativeFilm = [],
-        timer; //新建一个空数组来存储遍历的顺序作为播放的底片。
+    var negativeFilm = [], //新建一个空数组来存储遍历的顺序作为播放的底片。
+        timer;
 
     function clickHandler() { //给每个按钮添加一个点击事件
         var button = document.getElementsByTagName("input"),
@@ -64,16 +64,16 @@
 
     function inOrderTraverse(node, callback) { //中序
         if (node !== null && node !== undefined) {
-            preOrderTraverse(node.children[0], callback);
+            inOrderTraverse(node.children[0], callback);
             callback(node);
-            preOrderTraverse(node.children[1], callback);
+            inOrderTraverse(node.children[1], callback);
         }
     }
 
     function postOrderTraverse(node, callback) { //后序
         if (node !== null && node !== undefined) {
-            preOrderTraverse(node.children[0], callback);
-            preOrderTraverse(node.children[1], callback);
+            postOrderTraverse(node.children[0], callback);
+            postOrderTraverse(node.children[1], callback);
             callback(node);
         }
     }
