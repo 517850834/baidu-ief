@@ -29,13 +29,10 @@
         clearInterval(timer);
         if (value == "pre") {
             preOrderTraverse(root, addToNegative);
-            console.dir(negative);
         } else if (value == "in") {
             inOrdertraverse(root, addToNegative);
-            console.log(negative);
         } else if (value == "post") {
             postOrdertraverse(root, addToNegative);
-            console.dir(negative);
         } else {
             searchOrder();
         }
@@ -43,8 +40,29 @@
     }
 
     function searchOrder() {
-        alert(search.value);
-    };
+        var value = search.value;
+        value = value.replace(/^\s*/, "");
+        value = value.replace(/\s*$/, "");
+        if (selectStatus.now == "pre") {
+            preSearch(root, value, addToNegative);
+        }
+    }
+
+    function preSearch(node, value, callback) {
+        var nowNodeText = node.firstChild.textContent;
+        nowNodeText = nowNodeText.replace(/^\s*/, "");
+        nowNodeText = nowNodeText.replace(/\s*$/, "");
+        var length = node.children.length;
+        if (nowNodeText == value) {
+            callback(node);
+            return;
+        } else {
+            callback(node);
+            for (var i = 0; i < length; i++) {
+                preSearch(node.children[i], value, callback);
+            }
+        }
+    }
 
     function addToNegative(node) {
         negative.push(node);
@@ -53,22 +71,26 @@
     function broadcast() { //设置遍历动作完成后开始播放底片的函数
         var i = 0,
             length = negative.length;
-        timer = setInterval(function () {
-            if (i < length) {
-                negative[i].style.backgroundColor = "dodgerblue"; //给当前播放的底片加背景色
-                if (i > 0) {
-                    negative[i - 1].style.backgroundColor = ""; //同时清除上一个播放底片的背景色
+        if (length !== 0) {
+            timer = setInterval(function () {
+                if (i < length) {
+                    negative[i].style.backgroundColor = "dodgerblue"; //给当前播放的底片加背景色
+                    if (i > 0) {
+                        negative[i - 1].style.backgroundColor = ""; //同时清除上一个播放底片的背景色
+                    }
+                    i++;
+                    console.log(i);
+                } else {
+                    clearInterval(timer);
+                    var lastFPS = negative[length - 1];
+                    lastFPS.style.backgroundColor = ""; //播放介绍时清除最后一个底片的背景色
                 }
-                i++;
-                console.log(i);
-            } else {
-                clearInterval(timer);
-                var lastFPS = negative[length - 1];
-                lastFPS.style.backgroundColor = ""; //播放介绍时清除最后一个底片的背景色
+            }, 1000);
+        }
+        if (length !== 0) {
+            for (var j = 0; j < length; j++) {
+                negative[j].style.backgroundColor = "";
             }
-        }, 1000);
-        for (var j = 0; j < length; j++) {
-            negative[j].style.backgroundColor = "";
         }
     }
 
