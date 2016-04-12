@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+
+#alert .mask{
+    position: fixed;
+    background-color: #000;
+    opacity: .4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#alert .content{
+    position: fixed;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: move;
+}
+#alert .content h2{
+    margin: 0;
+    padding: 0 10px;
+    height: 20%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 60px;
+    border-radius: 10px 10px 0 0;
+    background-color: #333;
+    -webkit-transition: 500ms ease-out;
+    -moz-transition: 500ms ease-out;
+    transition: 500ms ease-out;
+}
+#alert .content h2:hover{
+    background-color: dodgerblue;
+}
+#alert .content p{
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+#alert .content .btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+#alert .content .btn button{
+    width: 45%;
+    margin-right: 5%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    -webkit-transition: 500ms ease-out;
+    -moz-transition: 500ms ease-out;
+    transition: 500ms ease-out;
+    cursor: pointer;
+}
+#alert .content .btn button:hover{
+    background-color: dodgerblue;
+}
+#alert .content .btn button:last-child{
+    margin: 0;
+}
